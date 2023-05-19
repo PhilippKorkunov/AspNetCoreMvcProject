@@ -1,0 +1,194 @@
+﻿@{
+    ViewData["Title"] = "Department Page";
+}
+
+@model DepartmentsWebApp.Models.DepartmentModel.DepartmentViewModel
+
+<div class="text-center" style="margin-bottom: 30px">
+    <h2>Department "@Model.Name"</h2>
+</div>
+
+@if (Model.CurrentDepartment.ParentDepartmentID is null)
+{
+    <a asp-action="Index" asp-controller="Home"
+        class="btn btn-danger btn-sm">
+        Return
+    </a>
+}
+else
+{
+    <a asp-action="Department" asp-controller="Home" asp-route-id="@Model.CurrentDepartment.ParentDepartmentID" class="btn btn-danger btn-sm">
+        Return
+    </a>
+}
+
+<h4 style="margin-top:30px">Info About this Department</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ParentDepartmentID</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.CurrentDepartment.ID</td>
+            <td>@Model.CurrentDepartment.ParentDepartmentID</td>
+            <td>@Model.CurrentDepartment.Code</td>
+            <td>@Model.CurrentDepartment.Name</td>
+            <td>
+                <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
+                   asp-route-parentDepartmentID="@Model.CurrentDepartment.ParentDepartmentID" asp-route-id="@Model.CurrentDepartment.ID"
+                   asp-route-name="@Model.CurrentDepartment.Name" asp-route-code="@Model.CurrentDepartment.Code"
+                   class="btn btn-primary btn-sm">Edit</a>
+
+                <a asp-action="Delete" asp-controller="Home" asp-route-id="@Model.CurrentDepartment.ID"
+                   onclick="return confirm('Are you sure you want to delete record with ID = @Model.CurrentDepartment.ID')"
+                   class="btn btn-danger btn-sm">Delete</a>
+
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+
+
+<div style="margin-top : 40px">
+
+    <h4>Children Departments</h4>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ParentDepartmentID</th>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
+                       asp-route-parentDepartmentID="@Model.CurrentDepartment.ID" asp-route-id="@Guid.NewGuid()"
+                       class="btn btn-primary btn-sm">Create New Children Department</a>
+                </td>
+            </tr>
+            @if (Model.ChildrenDepartments is not null && Model.ChildrenDepartments.Any())
+            {
+                @foreach (var item in Model.ChildrenDepartments.OrderBy(x => x.Name))
+                {
+                    <tr>
+                        <td>@item.CurrentDepartment.ID</td>
+                        <td>@item.CurrentDepartment.ParentDepartmentID</td>
+                        <td>@item.CurrentDepartment.Code</td>
+                        <td>@item.CurrentDepartment.Name</td>
+                        <td>
+                            <a asp-action="Department" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID" class="btn btn-primary btn-sm">Details</a>
+
+                            <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
+                           asp-route-parentDepartmentID="@item.CurrentDepartment.ParentDepartmentID" asp-route-id="@item.CurrentDepartment.ID"
+                           asp-route-name="@item.CurrentDepartment.Name" asp-route-code="@item.CurrentDepartment.Code"
+                               class="btn btn-primary btn-sm">Edit</a>
+
+                           @* <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID"
+                               onclick="return confirm('Are you sure you want to delete record with ID = @item.CurrentDepartment.ID')"
+                               class="btn btn-danger btn-sm">Delete</a>*@
+
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+
+    </table>
+</div>
+
+
+
+
+<div style="margin-top : 40px">
+
+    <h4>Employees</h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>DepartmentID</th>
+                <th>SurName</th>
+                <th>Name</th>
+                <th>Patronymic</th>
+                <th>DateOfBirth</th>
+                <th>Age</th>
+                <th>DocSeries</th>
+                <th>DocNumber</th>
+                <th>Position</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <a asp-action="CreateOrEditEmployee" asp-controller="CreateOrEditPage"
+                       asp-route-departmentId="@Model.CurrentDepartment.ID"
+                       class="btn btn-primary btn-sm">Create New Employee</a>
+                </td>
+            </tr>
+            @if (Model.Employees is not null && Model.Employees.Any())
+            {
+                @foreach (var item in Model.Employees.OrderBy(x => x.Name))
+                {
+                    <tr>
+                        <td>@item.ID</td>
+                        <td>@item.DepartmentID</td>
+                        <td>@item.SurName</td>
+                        <td>@item.FirstName</td>
+                        <td>@item.Patronymic</td>
+                        <td>@item.DateOfBirth</td>
+                        <td>@item.FullAge</td>
+                        <td>@item.DocSeries</td>
+                        <td>@item.DocNumber</td>
+                        <td>@item.Position</td>
+                        <td>
+                            <a asp-action="CreateOrEditEmployee" asp-controller="CreateOrEditPage"
+                              asp-route-id="@item.ID" asp-route-departmentId="@item.DepartmentID"
+                                asp-route-firstname="@item.FirstName" asp-route-surname="@item.SurName"
+                                asp-route-patronimyc="@item.Patronymic" asp-route-dateOfBirth="@item.DateOfBirth"
+                                 asp-route-docSeries="@item.DocSeries" asp-route-docNumber="@item.DocNumber"
+                                asp-route-position="@item.Position"
+                               class="btn btn-primary btn-sm">Edit</a>
+
+                           @* <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID"
+                               onclick="return confirm('Are you sure you want to delete record with ID = @item.CurrentDepartment.ID')"
+                               class="btn btn-danger btn-sm">Delete</a>*@
+                        </td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+
+    </table>
+</div>

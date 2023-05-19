@@ -1,0 +1,14 @@
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDataLayer.deps.json
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDataLayer.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDataLayer.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.csproj.AssemblyReference.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.AssemblyInfoInputs.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.AssemblyInfo.cs
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.csproj.CoreCompileInputs.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\refint\TestDataLayer.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\ref\TestDataLayer.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDataLayer.runtimeconfig.json
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.genruntimeconfig.cache

@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<DepartmentsWebApp.Models.DepartmentModel.DepartmentViewModel>
+
+
+
+
+
+<div class="text-center">
+    <h2>Parent Departments</h2>
+</div>
+
+<div>
+    <div>
+        @if (Model is not null && Model.Any())
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.OrderBy(x => x.Name))
+                    {
+                        <tr>
+                            <td>@item.CurrentDepartment.ID</td>
+                            <td>@item.CurrentDepartment.Code</td>
+                            <td>@item.CurrentDepartment.Name</td>
+                            <td>
+                                <a asp-action="Department" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID" 
+                                class="btn btn-primary btn-sm">Details</a>
+
+                                <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
+                                   asp-route-parentDepartmentID="@item.CurrentDepartment.ParentDepartmentID" asp-route-id="@item.CurrentDepartment.ID"
+                                   asp-route-name="@item.CurrentDepartment.Name" asp-route-code="@item.CurrentDepartment.Code"
+                                   class="btn btn-primary btn-sm">Edit</a>
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        }
+    </div>
+</div>

@@ -1,0 +1,36 @@
+D:\TestDBLib\bin\Debug\net6.0\TestDBLib.deps.json
+D:\TestDBLib\bin\Debug\net6.0\TestDBLib.dll
+D:\TestDBLib\bin\Debug\net6.0\TestDBLib.pdb
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.csproj.AssemblyReference.cache
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.AssemblyInfoInputs.cache
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.AssemblyInfo.cs
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.csproj.CoreCompileInputs.cache
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.dll
+D:\TestDBLib\obj\Debug\net6.0\refint\TestDBLib.dll
+D:\TestDBLib\obj\Debug\net6.0\TestDBLib.pdb
+D:\TestDBLib\obj\Debug\net6.0\ref\TestDBLib.dll
+C:\Users\filip\Downloads\WebApp\TestDBLib\bin\Debug\net6.0\TestDBLib.deps.json
+C:\Users\filip\Downloads\WebApp\TestDBLib\bin\Debug\net6.0\TestDBLib.dll
+C:\Users\filip\Downloads\WebApp\TestDBLib\bin\Debug\net6.0\TestDBLib.pdb
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.csproj.AssemblyReference.cache
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.AssemblyInfoInputs.cache
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.AssemblyInfo.cs
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.csproj.CoreCompileInputs.cache
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.dll
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\refint\TestDBLib.dll
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.pdb
+C:\Users\filip\Downloads\WebApp\TestDBLib\obj\Debug\net6.0\ref\TestDBLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDBLib.deps.json
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDBLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDBLib.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.csproj.AssemblyReference.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.AssemblyInfoInputs.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.AssemblyInfo.cs
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.csproj.CoreCompileInputs.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\refint\TestDBLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDBLib.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\ref\TestDBLib.dll

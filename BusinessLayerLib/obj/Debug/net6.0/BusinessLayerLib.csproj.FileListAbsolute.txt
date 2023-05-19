@@ -1,0 +1,47 @@
+D:\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.deps.json
+D:\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.dll
+D:\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.pdb
+D:\BusinessLayerLib\bin\Debug\net6.0\TestDBLib.dll
+D:\BusinessLayerLib\bin\Debug\net6.0\TestDBLib.pdb
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.AssemblyReference.cache
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfoInputs.cache
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfo.cs
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CoreCompileInputs.cache
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CopyComplete
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.dll
+D:\BusinessLayerLib\obj\Debug\net6.0\refint\BusinessLayerLib.dll
+D:\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.pdb
+D:\BusinessLayerLib\obj\Debug\net6.0\ref\BusinessLayerLib.dll
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.dll
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\ref\BusinessLayerLib.dll
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.pdb
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.deps.json
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.dll
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.pdb
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\bin\Debug\net6.0\TestDBLib.dll
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\bin\Debug\net6.0\TestDBLib.pdb
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.AssemblyReference.cache
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfoInputs.cache
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfo.cs
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CoreCompileInputs.cache
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CopyComplete
+C:\Users\filip\Downloads\WebApp\BusinessLayerLib\obj\Debug\net6.0\refint\BusinessLayerLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.deps.json
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.AssemblyReference.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfoInputs.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfo.cs
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CoreCompileInputs.cache
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CopyComplete
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\refint\BusinessLayerLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\ref\BusinessLayerLib.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\TestDataLayer.dll
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\TestDataLayer.pdb
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.runtimeconfig.json
+C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.genruntimeconfig.cache

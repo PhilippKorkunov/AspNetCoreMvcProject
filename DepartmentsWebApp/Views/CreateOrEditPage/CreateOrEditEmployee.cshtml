@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewData["Title"] = "CreateOrEditEmployee";
+}
+
+@model DepartmentsWebApp.Models.EmployeeModel.EmployeeEditModel
+
+
+<div class="text-center" style="padding-bottom : 40px">
+    <h2>Create or Edit New Employee</h2>
+</div>
+
+
+<form asp-asp-controller="CreateOrEditPage" asp-action="CreateOrEditEmployee" method="post">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">ID</label>
+        <div class="col mb-3">
+            <input asp-for="ID" type="text" class="from-control" name="Id" value="@Model.ID" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">DepartmentID</label>
+        <div class="col mb-3">
+            <input asp-for="DepartmentID" type="text" class="from-control" name="DepartmentID" value="@Model.DepartmentID" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">Surname</label>
+        <div class="col mb-3">
+            <input asp-for="SurName" type="text" class="from-control" name="SurName" value="@Model.SurName" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">Firstname</label>
+        <div class="col mb-3">
+            <input asp-for="FirstName" type="text" class="from-control" name="FirstName" value="@Model.FirstName" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">Patronymic</label>
+        <div class="col mb-3">
+            <input asp-for="Patronymic" type="text" class="from-control" name="Patronymic" value="@Model.Patronymic" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">Date Of Birth</label>
+        <div class="col mb-3">
+            <input asp-for="DateOfBirth" type="text" class="from-control" name="DateOfBirth" value="@Model.DateOfBirth" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">DocSeries</label>
+        <div class="col mb-3">
+            <input asp-for="DocSeries" type="text" class="from-control" name="DocSeries" value="@Model.DocSeries" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">DocNumber</label>
+        <div class="col mb-3">
+            <input asp-for="DocNumber" type="text" class="from-control" name="DocNumber" value="@Model.DocNumber" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-from-lable">Position</label>
+        <div class="col mb-3">
+            <input asp-for="Position" type="text" class="from-control" name="Position" value="@Model.Position" style="width : 40%" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <a asp-action="Department" asp-controller="Home" asp-route-id="@Model.DepartmentID" class="btn btn-danger btn-sm">
+                Return
+            </a>
+        </div>
+    </div>
+</form>
+
