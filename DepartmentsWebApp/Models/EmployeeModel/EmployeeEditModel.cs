@@ -8,18 +8,19 @@ namespace DepartmentsWebApp.Models.EmployeeModel
     {
         public int ID { get; set; }
 
-        [Required, RegularExpression(@"(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$")]
+        [Required, RegularExpression(@"(?im)^[{(]?[0-9A-F]{8}[-]?(?:[0-9A-F]{4}[-]?){3}[0-9A-F]{12}[)}]?$", 
+            ErrorMessage = "Expected GUID")]
         public Guid DepartmentID { get; set; }
 
-        [Required, RegularExpression(@"([А-ЯЁ][а-яё]+[\-\s]?)")]
+        [Required, RegularExpression(@"([А-ЯЁ][а-яё]+[\-\s]?)", ErrorMessage = "Expected Russian word starting with upper letter")]
         [MaxLength(50)]
         public string SurName { get; set; }
 
-        [Required, RegularExpression(@"([А-ЯЁ][а-яё]+[\-\s]?)")]
+        [Required, RegularExpression(@"([А-ЯЁ][а-яё]+[\-\s]?)", ErrorMessage = "Expected Russian word starting with upper letter")]
         [MaxLength(50)]
         public string FirstName { get; set; }
 
-        [RegularExpression(@"([А-ЯЁ][а-яё]+[\-\s]?)")]
+        [RegularExpression(@"([А-ЯЁ][а-яё]+[\-\s]?)", ErrorMessage = "Expected Russian word starting with upper letter")]
         [MaxLength(50)]
         public string? Patronymic { get; set; }
 
