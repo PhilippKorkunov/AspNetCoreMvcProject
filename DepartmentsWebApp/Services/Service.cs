@@ -1,4 +1,6 @@
 ﻿using BusinessLayerLib;
+using EFCore.BulkExtensions;
+using TestDBLib.Entities;
 
 namespace DepartmentsWebApp.Services
 {

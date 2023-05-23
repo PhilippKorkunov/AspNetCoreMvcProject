@@ -12,3 +12,17 @@ C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\ne
 C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\ref\TestDataLayer.dll
 C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\bin\Debug\net6.0\TestDataLayer.runtimeconfig.json
 C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\TestDBLib\obj\Debug\net6.0\TestDataLayer.genruntimeconfig.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\bin\Debug\net6.0\TestDataLayer.deps.json
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\bin\Debug\net6.0\TestDataLayer.runtimeconfig.json
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\bin\Debug\net6.0\TestDataLayer.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\bin\Debug\net6.0\TestDataLayer.pdb
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.csproj.AssemblyReference.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.AssemblyInfoInputs.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.AssemblyInfo.cs
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.csproj.CoreCompileInputs.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\refint\TestDataLayer.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.pdb
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\TestDataLayer.genruntimeconfig.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\TestDBLib\obj\Debug\net6.0\ref\TestDataLayer.dll

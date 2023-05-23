@@ -45,3 +45,20 @@ C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\D
 C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\TestDataLayer.pdb
 C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.runtimeconfig.json
 C:\Users\Philipp\Downloads\Telegram Desktop\WebApp\WebApp\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.genruntimeconfig.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.deps.json
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.runtimeconfig.json
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\bin\Debug\net6.0\BusinessLayerLib.pdb
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\bin\Debug\net6.0\TestDataLayer.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\bin\Debug\net6.0\TestDataLayer.pdb
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.AssemblyReference.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfoInputs.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.AssemblyInfo.cs
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CoreCompileInputs.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.csproj.CopyComplete
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\refint\BusinessLayerLib.dll
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.pdb
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\BusinessLayerLib.genruntimeconfig.cache
+D:\AspNetMvcProject\AspNetCoreMvcProject\BusinessLayerLib\obj\Debug\net6.0\ref\BusinessLayerLib.dll

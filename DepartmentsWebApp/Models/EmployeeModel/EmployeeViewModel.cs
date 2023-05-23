@@ -2,7 +2,7 @@
 
 namespace DepartmentsWebApp.Models.EmployeeModel
 {
-    public class EmployeeViewModel : IModel
+    public class EmployeeViewModel : IViewModel
     {
         public decimal ID { get; set; }
         public Department Department { get; set; }
@@ -10,16 +10,15 @@ namespace DepartmentsWebApp.Models.EmployeeModel
         public string SurName { get; set; }
         public string FirstName { get; set; }
         public string? Patronymic { get; set; }
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public int FullAge
         {
             get
             {
                 DateTime today = DateTime.Today;
-                DateTime dateOfBirth = DateTime.Parse(DateOfBirth);
 
-                int age = today.Year - dateOfBirth.Year;
-                if (dateOfBirth.AddYears(age) > today)
+                int age = today.Year - DateOfBirth.Year;
+                if (DateOfBirth.AddYears(age) > today)
                 {
                     age--;
                 }
@@ -40,7 +39,7 @@ namespace DepartmentsWebApp.Models.EmployeeModel
             SurName = employee.SurName;
             FirstName = employee.FirstName;
             Patronymic = employee.Patronymic;
-            DateOfBirth = employee.DateOfBirth.ToString("dd.MM.yyyy");
+            DateOfBirth = employee.DateOfBirth;
             DocSeries = employee.DocSeries;
             DocNumber = employee.DocNumber;
             Position = employee.Position;

@@ -21,59 +21,55 @@ namespace BusinessLayerLib.Implementations
 
         // CRUD для таблиц из базы данных как синхронные, так и асинхронные
 
-        public void Delete(T entry)
+        public int Delete(T entry)
         {
             CheckEntry(entry);
             testDBContext.Remove(entry);
-            testDBContext.SaveChanges();
+            return testDBContext.SaveChanges();
         }
-        public async Task DeleteAsync(T entry)
+        public async Task<int> DeleteAsync(T entry)
         {
             CheckEntry(entry);
             testDBContext.Remove(entry);
-            await testDBContext.SaveChangesAsync();
+            return await testDBContext.SaveChangesAsync();
         }
 
-        public void Update(T entry)
+        public int Update(T entry)
         {
             CheckEntry(entry);
             testDBContext.Update(entry);
-            testDBContext.SaveChanges();
+            return testDBContext.SaveChanges();
         }
-        public async Task UpdateAsync(T entry)
+        public async Task<int> UpdateAsync(T entry)
         {
             CheckEntry(entry);
             testDBContext.Update(entry);
-            await testDBContext.SaveChangesAsync();
+            return await testDBContext.SaveChangesAsync();
         }
 
-        public void Insert(T entry)
+        public int Insert(T entry)
         {
             CheckEntry(entry);
             testDBContext.Add(entry);
-            testDBContext.SaveChanges();
+            return testDBContext.SaveChanges();
         }
-        public async Task InsertAsync(T entry)
+        public async Task<int> InsertAsync(T entry)
         {
             CheckEntry(entry);
             await testDBContext.AddAsync(entry);
-            await testDBContext.SaveChangesAsync();
+            return await testDBContext.SaveChangesAsync();
         }
         public void InsertRange(params T[] entries) //EF Core + BULK SQL
         {
-            using (var transaction = testDBContext.Database.BeginTransaction())
-            {
-                testDBContext.BulkInsert(entries);
-                transaction.Commit();
-            }
+            using var transaction = testDBContext.Database.BeginTransaction();
+            testDBContext.BulkInsert(entries);
+            transaction.Commit();
         }
         public async Task InsertRangeAsync(params T[] entries) //EF Core + BULK SQL
         {
-            using (var transaction = testDBContext.Database.BeginTransaction())
-            {
-                testDBContext.BulkInsert(entries);
-                await transaction.CommitAsync();
-            }
+            using var transaction = testDBContext.Database.BeginTransaction();
+            testDBContext.BulkInsert(entries);
+            await transaction.CommitAsync();
         }
 
         public IQueryable<T>? Get(int takeNumber = 0, Expression<Func<T, bool>>? predicate = null)
@@ -97,6 +93,13 @@ namespace BusinessLayerLib.Implementations
                     (await testDBContext.Set<T>().Where(predicate).Take(takeNumber).ToListAsync()).AsQueryable();
         }
 
+        public async Task<T?> GetFirstOrDefault(string id)
+        {
+            IQueryable<T>? entities;
+            entities = await GetAsync();
+            if (entities is null) { return null; }
+            return entities.ToList().Where(x => x.VirtualId == id).FirstOrDefault();
+        }
 
 
         public async ValueTask DisposeAsync()

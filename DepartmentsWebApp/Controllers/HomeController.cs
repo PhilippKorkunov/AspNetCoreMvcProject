@@ -1,4 +1,5 @@
-﻿using DepartmentsWebApp.Models;
+﻿using BusinessLayerLib.Implementations;
+using DepartmentsWebApp.Models;
 using DepartmentsWebApp.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -30,22 +31,30 @@ namespace DepartmentsWebApp.Controllers
         }
 
 
-        public async Task<IActionResult> Department(Guid? id) // Страница с информацией по департаменту с ID = id
+        public async Task<IActionResult> Department(Guid? id, Guid? targetDepartmentId = null, int? targetEmployeeId = null) // Страница с информацией по департаменту с ID = id
         {
             await using var departmentsRepository = service.dataManager.DepartmentRepository;
             await using var employeeRepository = service.dataManager.EmployeeRepository;
 
-            IQueryable<Department>? departments = await departmentsRepository.GetAsync(predicate: x => x.ID == id);
+            if (targetDepartmentId is not null) { await DeleteDepartmentAsync((Guid)targetDepartmentId, departmentsRepository); } // Удаление департамента, если запрос содержит Id департамента
+
+            if (targetEmployeeId is not null) { await DeleteEmployeeAsync((int)targetEmployeeId, employeeRepository); } // Удаление сотрудника, если запрос содержит Id сотрудника
+
+            var departments = await departmentsRepository.GetAsync(predicate: x => x.ID == id);
             if (departments is not null && departments.Any())
             {
-                var childrenDepartmentsViews = from children in await departmentsRepository.GetAsync(predicate: x => x.ParentDepartmentID == id)
-                                               select children.ToViewModel(null, null); //Дочерние департаменты
+                var department = departments.FirstOrDefault();
 
+                var childrenDepartments = from children in await departmentsRepository.GetAsync(predicate: x => x.ParentDepartmentID == id)
+                                               select children.ToViewModel(null, null); //Дочерние департаменты
 
                 var employees = from employee in await employeeRepository.GetAsync(predicate: x => x.DepartmentID == id)
                                 select employee.ToViewModel(); //сотрудники департамента
 
-                return View(departments.FirstOrDefault().ToViewModel(childrenDepartmentsViews.ToList(), employees.ToList()));
+                if (department is not null)
+                {
+                    return View(department.ToViewModel(childrenDepartments.ToList(), employees.ToList()));
+                }
             }
             else if (id is null)
             {
@@ -55,27 +64,26 @@ namespace DepartmentsWebApp.Controllers
             return BadRequest();
         }
 
-        /*[HttpDelete, ActionName("Delete")]
-        public async Task<IActionResult> DeleteDepartmentAsync(Guid id)
+        private async Task DeleteDepartmentAsync(Guid deleteId, EFRepository<Department> departmentsRepository)
         {
-            await using var departmentsRepository = service.dataManager.DepartmentRepository;
-            
-            var departments = await departmentsRepository.GetAsync(predicate: x => x.ID == id);
-
-            if (departments is not null)
+            var deleteDepartments = await departmentsRepository.GetAsync(predicate: x => x.ID == deleteId);
+            if (deleteDepartments is not null && deleteDepartments.Any())
             {
-                var department = departments.FirstOrDefault();
-                if (department is not null)
-                {
-                    await departmentsRepository.DeleteAsync(department);
-                    return RedirectToAction("Department", department.ParentDepartmentID);
-                }
+                var deleteDepartment = deleteDepartments.FirstOrDefault();
+                if (deleteDepartment is not null) { _ = await departmentsRepository.DeleteAsync(deleteDepartment); }
             }
-            return BadRequest();
-        }*/
+        }
 
-
-
+        private async Task DeleteEmployeeAsync(int deleteId, EFRepository<Employee> employeeRepository)
+        {
+            var deleteEmployees = await employeeRepository.GetAsync(predicate: x => x.ID == deleteId);
+            if (deleteEmployees is not null && deleteEmployees.Any())
+            {
+                var deletedEmployee = deleteEmployees.FirstOrDefault();
+                if (deletedEmployee is not null) { _ = await employeeRepository.DeleteAsync(deletedEmployee); }
+            }
+        }
+ 
 
         public IActionResult Privacy()
         {

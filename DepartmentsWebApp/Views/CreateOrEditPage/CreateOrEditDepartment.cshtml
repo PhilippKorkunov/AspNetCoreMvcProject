@@ -8,53 +8,60 @@
 <div class="text-center" style="padding-bottom : 40px">
     <h2>Create or Edit Departmnt</h2>
 </div>
-@*
-@if (!string.IsNullOrEmpty(ViewBag.Message))
-{
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <strong>
-            @ViewBag.Message
-            <button type="button" class="btn-close" data-bs-dissmiss="alert"
-                    aria-label="Close"></button>
-        </strong>
-    </div>
-}*@
+
 
 <form asp-asp-controller="CreateOrEditPage" asp-action="CreateOrEditDepartment" method="post">
     <div class="row mb-3">
         <label class="col-sm-3 col-from-lable">ID</label>
         <div class="col mb-3">
-            <input asp-for="ID" type="text" class="from-control" name="Id" value="@Model.ID" style="width : 40%" />
+            <input asp-for="ID" type="text" class="from-control" name="Id" value="@Model.ID" style="width : 40%"  readonly/>
+            <span asp-validation-for="ID" class="text-danger"></span>
         </div>
     </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-from-lable">ParentDepartmentID</label>
         <div class="col mb-3">
-            <input asp-for="ParentDepartmentID" type="text" class="from-control" name="ParentDepartmentID" value="@Model.ParentDepartmentID" style="width : 40%" />
+            <select name="ParentDepartmentID" asp-for="ParentDepartmentID" style="width : 40%">
+                <option disabled>Choose Parent Department</option>
+                <option value="@Model.ParentDepartmentID" selected>@Model.ParentDepartmentID</option>
+                @if (Model.DepartmentsIDs is not null)
+                {
+                    @foreach (var item in Model.DepartmentsIDs)
+                    {
+                        if (item != Model.ParentDepartmentID)
+                        {
+                            <option value="@item">@item</option>
+                        }
+                    }
+                }
+            </select>
+            <span asp-validation-for="ParentDepartmentID" class="text-danger"></span>
         </div>
     </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-from-lable">Code</label>
         <div class="col mb-3">
             <input asp-for="Code" type="text" class="from-control" name="Code" value="@Model.Code" style="width : 40%" />
+            <span asp-validation-for="Code" class="text-danger"></span>
         </div>
     </div>
     <div class="row mb-3">
         <label class="col-sm-3 col-from-lable">Name</label>
         <div class="col mb-3">
             <input asp-for="Name" type="text" class="from-control" name="Name" value="@Model.Name" style="width : 40%" />
+            <span asp-validation-for="Name" class="text-danger"></span>
         </div>
     </div>
-  @*  @if (!string.IsNullOrEmpty(ViewBag.Message))
+    @if (!string.IsNullOrEmpty(ViewBag.Message))
     {
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             <strong>
                 @ViewBag.Message
                 <button type="button" class="btn-close" data-bs-dissmiss="alert"
-                aria-label="Close"></button>
+                        aria-label="Close"></button>
             </strong>
         </div>
-    }*@
+    }
     <div class="row mb-3">
         <div class="offset-sm-3 col-sm-3 d-grid" >
             <button type="submit" class="btn btn-primary">Submit</button>

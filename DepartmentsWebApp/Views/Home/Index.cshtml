@@ -6,8 +6,6 @@
 
 
 
-
-
 <div class="text-center">
     <h2>Parent Departments</h2>
 </div>
@@ -27,17 +25,31 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <a asp-controller="CreateOrEditPage" asp-action="CreateOrEditDepartment"
+                           asp-route-isFromDepartment="true" class="btn btn-primary btn-sm"
+                            asp-route-id="@Guid.NewGuid()" asp-route-parentDepartmntId="">
+                                Create New Head Department
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
                     @foreach (var item in Model.OrderBy(x => x.Name))
                     {
                         <tr>
                             <td>@item.CurrentDepartment.ID</td>
                             <td>@item.CurrentDepartment.Code</td>
                             <td>@item.CurrentDepartment.Name</td>
-                            <td>
+                            <td align="center">
                                 <a asp-action="Department" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID" 
                                 class="btn btn-primary btn-sm">Details</a>
 
-                                <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
+                                <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage" asp-route-isFromDepartment="true"
                                    asp-route-parentDepartmentID="@item.CurrentDepartment.ParentDepartmentID" asp-route-id="@item.CurrentDepartment.ID"
                                    asp-route-name="@item.CurrentDepartment.Name" asp-route-code="@item.CurrentDepartment.Code"
                                    class="btn btn-primary btn-sm">Edit</a>

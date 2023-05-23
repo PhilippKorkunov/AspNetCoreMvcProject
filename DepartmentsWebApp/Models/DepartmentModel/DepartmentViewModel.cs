@@ -3,7 +3,7 @@ using TestDBLib.Entities;
 
 namespace DepartmentsWebApp.Models.DepartmentModel
 {
-    public class DepartmentViewModel : IModel
+    public class DepartmentViewModel : IViewModel
     {
         public Department CurrentDepartment { get; set; }
         public string Name { get => CurrentDepartment.Name; }

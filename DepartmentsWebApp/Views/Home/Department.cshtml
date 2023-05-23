@@ -40,16 +40,19 @@ else
             <td>@Model.CurrentDepartment.ParentDepartmentID</td>
             <td>@Model.CurrentDepartment.Code</td>
             <td>@Model.CurrentDepartment.Name</td>
-            <td>
+            <td align="center">
                 <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
                    asp-route-parentDepartmentID="@Model.CurrentDepartment.ParentDepartmentID" asp-route-id="@Model.CurrentDepartment.ID"
                    asp-route-name="@Model.CurrentDepartment.Name" asp-route-code="@Model.CurrentDepartment.Code"
+                   asp-route-isFromDepartment="true"
                    class="btn btn-primary btn-sm">Edit</a>
 
-                <a asp-action="Delete" asp-controller="Home" asp-route-id="@Model.CurrentDepartment.ID"
-                   onclick="return confirm('Are you sure you want to delete record with ID = @Model.CurrentDepartment.ID')"
+                @if ((Model.ChildrenDepartments is null || !Model.ChildrenDepartments.Any()) && (Model.Employees is null || !Model.Employees.Any()))
+                {
+                   <a asp-action="Department" asp-controller="Home" asp-route-id="@Model.CurrentDepartment.ParentDepartmentID" formaction="post"
+                   asp-route-targetDepartmentId="@Model.CurrentDepartment.ID" onclick="return confirm('Are you sure you want to delete record with ID = @Model.CurrentDepartment.ID')"
                    class="btn btn-danger btn-sm">Delete</a>
-
+                }
             </td>
         </tr>
     </tbody>
@@ -80,7 +83,7 @@ else
                 <td></td>
                 <td></td>
                 <td>
-                    <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
+                    <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage" asp-route-isFromDepartment="true"
                        asp-route-parentDepartmentID="@Model.CurrentDepartment.ID" asp-route-id="@Guid.NewGuid()"
                        class="btn btn-primary btn-sm">Create New Children Department</a>
                 </td>
@@ -94,18 +97,14 @@ else
                         <td>@item.CurrentDepartment.ParentDepartmentID</td>
                         <td>@item.CurrentDepartment.Code</td>
                         <td>@item.CurrentDepartment.Name</td>
-                        <td>
+                        <td align="center">
                             <a asp-action="Department" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID" class="btn btn-primary btn-sm">Details</a>
 
-                            <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage"
-                           asp-route-parentDepartmentID="@item.CurrentDepartment.ParentDepartmentID" asp-route-id="@item.CurrentDepartment.ID"
-                           asp-route-name="@item.CurrentDepartment.Name" asp-route-code="@item.CurrentDepartment.Code"
+                            <a asp-action="CreateOrEditDepartment" asp-controller="CreateOrEditPage" 
+                            asp-route-parentDepartmentID="@item.CurrentDepartment.ParentDepartmentID" asp-route-id="@item.CurrentDepartment.ID"
+                            asp-route-name="@item.CurrentDepartment.Name" asp-route-code="@item.CurrentDepartment.Code"
+                            asp-route-isFromDepartment="true"
                                class="btn btn-primary btn-sm">Edit</a>
-
-                           @* <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID"
-                               onclick="return confirm('Are you sure you want to delete record with ID = @item.CurrentDepartment.ID')"
-                               class="btn btn-danger btn-sm">Delete</a>*@
-
                         </td>
                     </tr>
                 }
@@ -152,7 +151,8 @@ else
                 <td></td>
                 <td>
                     <a asp-action="CreateOrEditEmployee" asp-controller="CreateOrEditPage"
-                       asp-route-departmentId="@Model.CurrentDepartment.ID"
+                       asp-route-departmentId="@Model.CurrentDepartment.ID" asp-route-isFromDepartment="true"
+                       asp-route-dateOfBirth="@DateTime.Parse("1900-01-01")"
                        class="btn btn-primary btn-sm">Create New Employee</a>
                 </td>
             </tr>
@@ -166,23 +166,24 @@ else
                         <td>@item.SurName</td>
                         <td>@item.FirstName</td>
                         <td>@item.Patronymic</td>
-                        <td>@item.DateOfBirth</td>
+                        <td>@item.DateOfBirth.ToString("dd.MM.yyyy")</td>
                         <td>@item.FullAge</td>
                         <td>@item.DocSeries</td>
                         <td>@item.DocNumber</td>
                         <td>@item.Position</td>
-                        <td>
+                        <td align="center">
                             <a asp-action="CreateOrEditEmployee" asp-controller="CreateOrEditPage"
-                              asp-route-id="@item.ID" asp-route-departmentId="@item.DepartmentID"
-                                asp-route-firstname="@item.FirstName" asp-route-surname="@item.SurName"
-                                asp-route-patronimyc="@item.Patronymic" asp-route-dateOfBirth="@item.DateOfBirth"
-                                 asp-route-docSeries="@item.DocSeries" asp-route-docNumber="@item.DocNumber"
-                                asp-route-position="@item.Position"
+                            asp-route-id="@item.ID" asp-route-departmentId="@item.DepartmentID"
+                            asp-route-firstname="@item.FirstName" asp-route-surname="@item.SurName"
+                            asp-route-patronymic="@item.Patronymic" asp-route-dateOfBirth="@item.DateOfBirth.ToString("yyyy-MM-dd")"
+                            asp-route-docSeries="@item.DocSeries" asp-route-docNumber="@item.DocNumber"
+                            asp-route-position="@item.Position" asp-route-isFromDepartment="true"
                                class="btn btn-primary btn-sm">Edit</a>
 
-                           @* <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.CurrentDepartment.ID"
-                               onclick="return confirm('Are you sure you want to delete record with ID = @item.CurrentDepartment.ID')"
-                               class="btn btn-danger btn-sm">Delete</a>*@
+                                <a asp-action="Department" asp-controller="Home" asp-route-id="@Model.CurrentDepartment.ID" formaction="post"
+                                asp-route-targetEmployeeId="@item.ID" 
+                                onclick="return confirm('Are you sure you want to delete record with ID = @Model.CurrentDepartment.ID')"
+                               class="btn btn-danger btn-sm">Delete</a>
                         </td>
                     </tr>
                 }
